@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projeto Angular</title>
+</head>
+<body ng-app="myApp" ng-controller="indexController">
+<header>
+	<h2>{{titulo}}</h2>
+</header>
+
+
+
+
+
+
+
+<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+<script type="text/javascript">
+
+var app = angular.module('myApp', []);
+app.controller('indexController', function ($scope) {
+	$scope.titulo = "Sistema em AngularJS";
+}) 	
+
+</script>
+</body>
+</html>
