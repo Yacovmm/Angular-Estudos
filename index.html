@@ -8,6 +8,28 @@
 	<h2 ng-bind="titulo"></h2>
 </header>
 
+<table>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>E-mail</th>
+			<th>Nota 1</th>
+			<th>Nota 2</th>
+			<th>Nota 3</th>
+			<th>Médias</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="aluno in alunos">
+			<td>{{aluno.nome}}</td>
+			<td>{{aluno.email}}</td>
+			<td>{{aluno.nota1}}</td>
+			<td>{{aluno.nota2}}</td>
+			<td>{{aluno.nota3}}</td>
+		</tr>
+	</tbody>
+</table>
+
 
 
 
@@ -20,6 +42,37 @@
 var app = angular.module('myApp', []);
 app.controller('indexController', function ($scope) {
 	$scope.titulo = "Sistema em AngularJS";
+
+	$scope.alunos = [
+		{
+			nome : "Camila",
+			email: "camila@gmail.com",
+			nota1: 65,
+			nota2 : 80,
+			nota3 : 80
+		},
+		{
+			nome : "Gsbriel",
+			email: "camila@gmail.com",
+			nota1: 65,
+			nota2 : 80,
+			nota3 : 80
+		},
+		{
+			nome : "Vitor",
+			email: "camila@gmail.com",
+			nota1: 65,
+			nota2 : 80,
+			nota3 : 80
+		},
+		{
+			nome : "Marcelo",
+			email: "camila@gmail.com",
+			nota1: 65,
+			nota2 : 80,
+			nota3 : 80
+		}
+	];
 }) 	
 
 </script>
