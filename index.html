@@ -11,6 +11,7 @@
 <table>
 	<thead>
 		<tr>
+			<th>Select</th>
 			<th>Nome</th>
 			<th>E-mail</th>
 			<th>Nota 1</th>
@@ -21,14 +22,28 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="aluno in alunos">
+			<td><input type="checkbox" ng-model="alunos.done"></td>
 			<td>{{aluno.nome}}</td>
 			<td>{{aluno.email}}</td>
 			<td>{{aluno.nota1}}</td>
 			<td>{{aluno.nota2}}</td>
 			<td>{{aluno.nota3}}</td>
+			<td>{{(aluno.nota1 + aluno.nota2 + aluno.nota3) / 3  }}</td>
 		</tr>
 	</tbody>
 </table>
+<hr>
+ <form ng-submit="add()">
+	 <input type="text" ng-model="addnome" placeholder="Entre com o nome">
+	 <br>
+	 <input type="email" ng-model="addemail" placeholder="Entre com o email">
+	 <br>
+	 <input type="number" ng-model="addnota1" placeholder="nota 1">
+	 <input type="number" ng-model="addnota2" placeholder="nota 2">
+	 <input type="number" ng-model="addnota3" placeholder="nota 3">
+	 <br>
+	 <input type="submit" value="Adicionar">
+ </form>
 
 
 
